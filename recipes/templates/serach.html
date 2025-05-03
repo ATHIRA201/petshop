@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recipeeesss</title>
+    <link rel="stylesheet" href="{% static 'css/search.css'%}">
+</head>
+<body>
+    <header>
+        <h1>Food Recipe Management System</h1>
+    </header>
+    <main>
+        <form id="searchForm">
+            <input type="text" id="search" placeholder="Search Recipes">
+            <button type="submit">Search</button>
+        </form>
+        <div id="recipeList">
+            <a href="addrecpe" class="nav-item nav-link">Add</a>
+            <a href="search" class="nav-item nav-link">search</a>
+
+
+            <!-- Recipes will be displayed here -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Food Recipe Management</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

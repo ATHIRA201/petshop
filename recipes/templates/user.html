@@ -1,0 +1,28 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/user.css' %}" />
+<table>
+    <caption>REGISTRATION</caption>
+    <thead>
+      <tr>
+        <th scope="col">Full Name</th>
+        <th scope="col">Ingredients</th>
+        <th scope="col">Cooking style</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        {% for m in data %}
+      <tr>
+        <td data-label="Account">{{m.fname}}</td>
+        <td data-label="Amount">{{m.iname}}</td>
+        <td data-label="Period">{{m.cs}}</td>
+        <td data-label="pay"><button><a href="{% url 'edit' m.id %}"> Edit</a></button></td>
+        <td data-label="del"><button><a href="{% url 'delete' m.id %}"> Delete</a></button></td>
+        
+      </tr>
+        {% endfor %}
+      
+    </tbody>
+  </table>

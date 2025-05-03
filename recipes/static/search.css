@@ -1,0 +1,80 @@
+/* search.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff8f0;
+    color: #333;
+}
+
+header {
+    background-color: #ff6f61;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+main {
+    padding: 20px;
+}
+
+form#searchForm {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+form#searchForm input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+form#searchForm button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+form#searchForm button:hover {
+    background-color: #e65c50;
+}
+
+#recipeList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#recipeList a {
+    text-decoration: none;
+    color: #ff6f61;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#recipeList a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #ff6f61;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

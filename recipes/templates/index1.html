@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe Registration</title>
+  <link rel="stylesheet" href="{% static 'recipes.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h2>Search Recipes</h2>
+    <form method="get" action="{% url 'search_recipes' %}">
+      <input type="text" name="query" placeholder="Search for a recipe..." required>
+      <button type="submit">Search</button>
+    </form>
+
+    <h2>Register a Recipe</h2>
+    <form method="post">
+      {% csrf_token %}
+      <label for="rn">Recipe Name</label>
+      <input type="text" id="ron" name="rn" required>
+
+      <label for="ds">Description</label>
+      <input type="text" id="dos" name="ds" required>
+
+      <label for="ig">Ingredients</label>
+      <input type="text" id="iog" name="ig" required>
+
+      <label for="ins">Instructions</label>
+      <input type="text" id="inos" name="ins" required>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>
